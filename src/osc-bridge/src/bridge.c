@@ -429,16 +429,16 @@ schema_t br_get_schema(bridge_t *br, uri_t uri)
     schema_t sch;
 
     //printf("[debug] loading json file\n");
-    FILE *f = fopen("schema/test.json", "r");
+    FILE *f = fopen("schema/zyn-fusion.json", "r");
     if(!f && br->search_path) {
         char tmp[256];
-        snprintf(tmp, sizeof(tmp), "%s%s", br->search_path, "schema/test.json");
+        snprintf(tmp, sizeof(tmp), "%s%s", br->search_path, "schema/zyn-fusion.json");
         f = fopen(tmp, "r");
     }
     if(!f)
-        f = fopen("src/osc-bridge/schema/test.json", "r");
+        f = fopen("src/osc-bridge/schema/zyn-fusion.json", "r");
     if(!f) {
-        printf("[ERROR:Zyn] schema/test.json file is missing.\n");
+        printf("[ERROR:Zyn] schema/zyn-fusion.json file is missing.\n");
         printf("[ERROR:Zyn] Please check your installation for problems\n");
         exit(1);
     }

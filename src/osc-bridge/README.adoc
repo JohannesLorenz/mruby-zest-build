@@ -28,9 +28,9 @@ writing this README, though several additions are planed.
 Paths to OSC Schema files should not be assumed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Currently 'schema/test.json' is assumed to be the only valid OSC
-schema. Custom paths should be usable and for embedding purposes it
-should be possible to load directly from a preloaded const char *.
+Currently 'schema/zyn-fusion.json' is assumed to be the only valid
+OSC schema. Custom paths should be usable and for embedding purposes
+it should be possible to load directly from a preloaded const char *.
 
 OSC actions should be verified to be valid when they're sent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

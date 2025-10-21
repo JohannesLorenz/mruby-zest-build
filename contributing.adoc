@@ -55,9 +55,10 @@ src/osc-bridge
 This is the module that handles all communications with external processes via
 OSC. This code is reasonably complete, but it also handles the OSC schema which
 specifies a lot of information from the zynaddsubfx core (without needing to
-ask about it over UDP/OSC). Once in a while 'src/osc-bridge/schema/test.json'
-will need to be updated, but that only needs to be done if the rtosc based
-dispatch tree is getting modified (subject for later details)
+ask about it over UDP/OSC). Once in a while
+'src/osc-bridge/schema/zyn-fusion.json' will need to be updated, but that only
+needs to be done if the rtosc based dispatch tree is getting modified (subject
+for later details)
 
 
 Running the app

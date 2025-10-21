@@ -109,7 +109,7 @@ stats:
 	@echo 'number of ruby   files:' `find src/ -type f | grep -e rb$$ | wc -l`
 	@echo 'number of c      files:' `find src/ -type f | grep -e c$$ | wc -l`
 	@echo 'number of header files:' `find src/ -type f | grep -e h$$ | wc -l`
-	@echo 'lines of OSC schema:' `wc -l src/osc-bridge/schema/test.json`
+	@echo 'lines of OSC schema:' `wc -l src/osc-bridge/schema/zyn-fusion.json`
 	@echo 'lines of qml:'
 	@wc -l `find src/ -type f | grep qml$$` | tail -n 1
 	@echo 'lines of ruby:'
@@ -167,17 +167,17 @@ pack:
 	mkdir package/qml
 	mkdir package/font
 	mkdir package/completions
-	cp src/mruby-zest/qml/*             package/qml/
-	cp src/mruby-zest/example/*         package/qml/
-	cp src/osc-bridge/schema/test.json  package/schema/
-	cp deps/nanovg/example/*.ttf        package/font/
-	cp mruby/bin/mruby                  package/
-	cp libzest.so                       package/
-	cp zest                             package/
-	cp completions/zyn-fusion           package/completions
-	echo 'Version 3.0.0-pre '       >>  package/VERSION
-	echo 'built on: '               >>  package/VERSION
-	echo `date`                     >>  package/VERSION
+	cp src/mruby-zest/qml/*                   package/qml/
+	cp src/mruby-zest/example/*               package/qml/
+	cp src/osc-bridge/schema/zyn-fusion.json  package/schema/
+	cp deps/nanovg/example/*.ttf              package/font/
+	cp mruby/bin/mruby                        package/
+	cp libzest.so                             package/
+	cp zest                                   package/
+	cp completions/zyn-fusion                 package/completions
+	echo 'Version 3.0.0-pre '             >>  package/VERSION
+	echo 'built on: '                     >>  package/VERSION
+	echo `date`                           >>  package/VERSION
 	rm -f zest-dist.tar
 	rm -f zest-dist.tar.bz2
 	tar cf zest-dist.tar package/
